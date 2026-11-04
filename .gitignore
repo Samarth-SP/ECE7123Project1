@@ -1,0 +1,20 @@
+# Kaggle data (download separately, see README)
+data/
+
+# Checkpoints: only the submitted model is tracked
+*.pt
+!final_1.pt
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.bbl
+report/*.blg
+report/*.fls
+report/*.fdb_latexmk
+report/*.out
+report/*.synctex.gz
+
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
