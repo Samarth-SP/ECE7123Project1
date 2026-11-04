@@ -1,4 +1,4 @@
-# ECE-GY 7123 Project 1: Efficient ResNet Architecture Challnge on CIFAR-10
+# ECE-GY 7123 Project 1: Efficient ResNet Architecture Challenge on CIFAR-10
 
 ## Contents
 
