@@ -1,12 +1,4 @@
-# ECE-GY 7123 Project 1: Efficient ResNet on CIFAR-10
-
-A ResNet with 4.62M trainable parameters, trained from scratch for the Kaggle
-"Efficient ResNet Architecture Challenge" (under 5M parameters, no pretrained weights, no external data).
-
-| | Accuracy |
-|---|---|
-| Held-out validation (5,000 images) | 97.06% |
-| Public leaderboard (all-data retrain) | 88.4% |
+# ECE-GY 7123 Project 1: Efficient ResNet Architecture Challnge on CIFAR-10
 
 ## Contents
 
@@ -27,6 +19,13 @@ It is trained with SGD (Nesterov, peak lr 0.2, wd 5e-4) under a one-cycle schedu
 TrivialAugment, random erasing, and horizontal-flip test-time augmentation.
 For submission it was retrained on all 50k images for 250 epochs. See `report/report.pdf` for details.
 
+## Results
+
+|                                       | Accuracy |
+| ------------------------------------- | -------- |
+| Held-out validation (5,000 images)    | 97.06%   |
+| Public leaderboard (all-data retrain) | 88.4%    |
+
 ## Reproducing
 
 1. Download the competition data into `data/`:
@@ -37,6 +36,4 @@ For submission it was retrained on all 50k images for 250 epochs. See `report/re
 3. Run `proj.ipynb` top to bottom.
    - With `results.csv` present, every logged run is skipped, and the last cell rebuilds `submission.csv` from `final_1.pt`.
    - Delete `results.csv` to rerun everything from scratch.
-     That took roughly 25 hours on an Apple-silicon GPU (MPS); the code also uses CUDA when it is available.
-
-Report build: `cd report && latexmk -pdf report.tex`
+     That took roughly 25 hours on an Apple-silicon GPU M3 Max (MPS); the code also uses CUDA when it is available.
